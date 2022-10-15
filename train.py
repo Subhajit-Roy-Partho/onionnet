@@ -178,9 +178,9 @@ if __name__ == "__main__":
                         help="Input. The docked cplx feature training set.")
     parser.add_argument("-fn_validate", type=str, default=["features_2.csv", ], nargs="+",
                         help="Input. The PDBBind feature validating set.")
-    parser.add_argument("-fn_test", type=str, default=["features_2.csv", ], nargs="+",
+    parser.add_argument("-fn_test", type=str, default=["features_3.csv", ], nargs="+",
                         help="Input. The PDBBind feature testing set.")
-    parser.add_argument("-y_col", type=str, nargs="+", default=["pKa_relu", "pKa_true"],
+    parser.add_argument("-y_col", type=str, nargs="+", default=["pKa_true", "pKa_true"],
                         help="Input. The pKa colname as the target. ")
     parser.add_argument("-scaler", type=str, default="StandardScaler.model",
                         help="Output. The standard scaler file to save. ")
