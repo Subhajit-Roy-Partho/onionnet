@@ -167,10 +167,6 @@ def create_model(input_size, lr=0.0001, maxpool=True, dropout=0.1):
 if __name__ == "__main__":
     d = """Train or predict the features based on protein-ligand complexes.
 
-    Examples:
-    python CNN_model_keras.py -fn1 docked_training_features_12ksamples_rmsd_lessthan3a.csv 
-           -fn2 training_pka_features.csv -history hist.csv -pKa_col pKa_mimic pKa -train 1
-
     """
 
     parser = argparse.ArgumentParser(description=d, formatter_class=RawDescriptionHelpFormatter)
@@ -180,7 +176,7 @@ if __name__ == "__main__":
                         help="Input. The PDBBind feature validating set.")
     parser.add_argument("-fn_test", type=str, default=["features_3.csv", ], nargs="+",
                         help="Input. The PDBBind feature testing set.")
-    parser.add_argument("-y_col", type=str, nargs="+", default=["pKa_true", "pKa_true"],
+    parser.add_argument("-y_col", type=str, nargs="+", default=["pKa", "pKa"],
                         help="Input. The pKa colname as the target. ")
     parser.add_argument("-scaler", type=str, default="StandardScaler.model",
                         help="Output. The standard scaler file to save. ")
