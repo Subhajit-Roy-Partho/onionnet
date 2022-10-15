@@ -190,7 +190,7 @@ if __name__ == "__main__":
                         help="Output. The trained DNN model file to save. ")
     parser.add_argument("-prev_model", type=str, default="model/prev_trained_model.h5", 
                         help="Load previously trained model to fine tune the model.")
-    parser.add_argument("-log", type=str, default="",
+    parser.add_argument("-log", type=str, default="logging.log",
                         help="Output. The logger file name to save. ")
     parser.add_argument("-out", type=str, default="predicted_pKa.csv",
                         help="Output. The predicted pKa values file name to save. ")
